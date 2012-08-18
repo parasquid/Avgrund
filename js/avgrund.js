@@ -28,13 +28,25 @@
 		}
 	}
 
-	function activate( state ) {
+	function activate( state, pos ) {
+    
+        var position = pos.getBoundingClientRect();
+        var top = parseInt(position.top + 40);
+        var left = parseInt(position.left + 40);
+        
+        cPopup = document.getElementsByClassName("avgrund-popup");       
+        
+        cPopup[0].style.top = top + 'px';
+        cPopup[0].style.left = left + 'px';
+
 		document.addEventListener( 'keyup', onDocumentKeyUp, false );
 		document.addEventListener( 'click', onDocumentClick, false );
 
 		removeClass( popup, currentState );
 		addClass( popup, 'no-transition' );
 		addClass( popup, state );
+        
+        
 
 		setTimeout( function() {
 			removeClass( popup, 'no-transition' );

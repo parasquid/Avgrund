@@ -23,8 +23,7 @@
 			<p>
 				A modal concept which aims to give a sense of depth between the page and modal layers. Click a button below to give it a try.
 			</p>
-			<button onclick="avgrund.activate( 'stack' );">Stack it</button>
-			<button onclick="avgrund.activate();">Grow it</button>
+                <button onclick="avgrund.activate( 'stack', this );">Stack it</button>			
 			<p>
 				Uses CSS transforms to scale components and CSS filters to blur the page. Built for the fun of 
 				it, not intended for any practical use.
@@ -32,6 +31,9 @@
 			<p>
 				<em>Avgrund</em> is Swedish for abyss.
 			</p>
+            <p>
+                <button onclick="avgrund.activate( '', this );">Grow it</button>
+            </p>
 			<small>
 				Created by <a href="http://twitter.com/hakimel">@hakimel</a> / <a href="http://hakim.se/">http://hakim.se</a>
 			</small>
