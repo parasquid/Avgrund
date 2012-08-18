@@ -11,6 +11,9 @@
 		popup = document.querySelector( '.avgrund-popup' ),
 		cover = document.querySelector( '.avgrund-cover' ),
 		currentState = null;
+    
+    //Added draggable popup
+    $( ".avgrund-popup" ).draggable({ cursor: "move" });
 
 	container.className = container.className.replace( /\s+$/gi, '' ) + ' avgrund-ready';
 
